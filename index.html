@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FitCheck — Gizlilik Politikası / Privacy Policy</title>
+  <meta name="description" content="FitCheck uygulaması gizlilik politikası ve kullanım koşulları." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --accent: #E07A5F;
+      --bg: #0f0f0f;
+      --surface: #1a1a1a;
+      --border: #2a2a2a;
+      --text: #f0ece8;
+      --muted: #888;
+      --radius: 16px;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      font-size: 16px;
+    }
+
+    /* ── Header ── */
+    header {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(15,15,15,0.85);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+      padding: 16px 24px;
+      display: flex; align-items: center; gap: 12px;
+    }
+    .logo {
+      width: 36px; height: 36px;
+      background: var(--accent);
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .logo svg { color: #fff; }
+    header h1 { font-size: 18px; font-weight: 700; }
+    header span { color: var(--muted); font-size: 14px; margin-left: auto; }
+
+    /* ── Nav tabs ── */
+    .tab-bar {
+      display: flex; gap: 8px;
+      padding: 20px 24px 0;
+      max-width: 800px; margin: 0 auto;
+    }
+    .tab {
+      padding: 8px 20px; border-radius: 24px;
+      border: 1px solid var(--border);
+      background: transparent; color: var(--muted);
+      font-size: 14px; font-weight: 600; cursor: pointer;
+      transition: all 0.2s;
+    }
+    .tab.active { background: var(--accent); border-color: var(--accent); color: #fff; }
+
+    /* ── Main ── */
+    main { max-width: 800px; margin: 0 auto; padding: 32px 24px 80px; }
+
+    .page { display: none; }
+    .page.active { display: block; }
+
+    /* ── Hero ── */
+    .doc-hero {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 32px;
+      margin-bottom: 32px;
+    }
+    .doc-hero .badge {
+      display: inline-block;
+      background: rgba(224,122,95,0.15);
+      color: var(--accent);
+      font-size: 12px; font-weight: 700;
+      padding: 4px 12px; border-radius: 24px;
+      margin-bottom: 12px; letter-spacing: 0.05em;
+    }
+    .doc-hero h2 { font-size: 28px; font-weight: 700; margin-bottom: 8px; }
+    .doc-hero p { color: var(--muted); font-size: 14px; }
+
+    /* ── Sections ── */
+    .doc-section {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px 32px;
+      margin-bottom: 16px;
+    }
+    .doc-section h3 {
+      font-size: 17px; font-weight: 700;
+      margin-bottom: 14px;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .doc-section h3 .num {
+      width: 28px; height: 28px; border-radius: 8px;
+      background: rgba(224,122,95,0.15); color: var(--accent);
+      font-size: 13px; font-weight: 800;
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    }
+    .doc-section p { color: #bbb; font-size: 15px; margin-bottom: 10px; }
+    .doc-section p:last-child { margin-bottom: 0; }
+    .doc-section ul { color: #bbb; font-size: 15px; padding-left: 20px; }
+    .doc-section ul li { margin-bottom: 6px; }
+
+    /* ── Lang toggle ── */
+    .lang-toggle {
+      display: flex; gap: 6px; margin-left: auto;
+    }
+    .lang-btn {
+      padding: 4px 12px; border-radius: 8px; border: 1px solid var(--border);
+      background: transparent; color: var(--muted);
+      font-size: 12px; font-weight: 700; cursor: pointer; transition: all 0.2s;
+    }
+    .lang-btn.active { background: var(--surface); color: var(--text); border-color: #444; }
+
+    /* ── Footer ── */
+    footer {
+      text-align: center; padding: 40px 24px;
+      color: var(--muted); font-size: 13px;
+      border-top: 1px solid var(--border);
+    }
+    footer a { color: var(--accent); text-decoration: none; }
+
+    .contact-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px 32px;
+      margin-top: 32px;
+      display: flex; align-items: center; justify-content: space-between; gap: 16px;
+      flex-wrap: wrap;
+    }
+    .contact-card p { color: var(--muted); font-size: 14px; }
+    .contact-card a {
+      display: inline-block;
+      background: var(--accent); color: #fff;
+      padding: 10px 24px; border-radius: 24px;
+      font-size: 14px; font-weight: 700; text-decoration: none;
+      white-space: nowrap;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M16 8l-3.3-6.6a2 2 0 0 0-3.4 0L6 8"/>
+      <path d="M6 8h10a2 2 0 0 1 2 2v1H4v-1a2 2 0 0 1 2-2z"/>
+      <rect x="2" y="11" width="20" height="10" rx="2"/>
+    </svg>
+  </div>
+  <h1>fitcheck</h1>
+  <div class="lang-toggle">
+    <button class="lang-btn active" onclick="setLang('tr')">TR</button>
+    <button class="lang-btn" onclick="setLang('en')">EN</button>
+  </div>
+</header>
+
+<div class="tab-bar">
+  <button class="tab active" onclick="showTab('privacy', this)">Gizlilik Politikası</button>
+  <button class="tab" onclick="showTab('terms', this)">Kullanım Koşulları</button>
+</div>
+
+<main>
+
+  <!-- ───────── PRIVACY POLICY TR ───────── -->
+  <div id="privacy-tr" class="page active">
+    <div class="doc-hero">
+      <div class="badge">GİZLİLİK POLİTİKASI</div>
+      <h2>Verileriniz, Kontrolünüz</h2>
+      <p>Son güncelleme: Şubat 2026 &nbsp;·&nbsp; FitCheck Uygulaması</p>
+    </div>
+
+    <div class="doc-section">
+      <h3><span class="num">1</span> Topladığımız Bilgiler</h3>
+      <p>FitCheck, hizmetimizi sağlamak için yalnızca gerekli olan bilgileri toplar:</p>
+      <ul>
+        <li><strong>Hesap bilgileri:</strong> Ad, e-posta adresi</li>
+        <li><strong>Profil bilgileri:</strong> Profil fotoğrafı, bio, yaş (isteğe bağlı), şehir (isteğe bağlı)</li>
+        <li><strong>İçerik:</strong> Paylaştığınız kombin fotoğrafları ve videoları</li>
+        <li><strong>Etkileşimler:</strong> Beğeniler, yorumlar, oylar</li>
+        <li><strong>Mesajlar:</strong> Kullanıcılar arası doğrudan mesajlar</li>
+      </ul>
+    </div>
+
+    <div class="doc-section">
+      <h3><span class="num">2</span> Bilgileri Nasıl Kullanıyoruz</h3>
+      <ul>
+        <li>Hesabınızı oluşturmak ve yönetmek</li>
+        <li>Kişiselleştirilmiş stil akışı sunmak</li>
+        <li>Topluluk etkileşimlerini (yorumlar, oylar) işlemek</li>
+        <li>Uygulama güvenliğini sağlamak</li>
+        <li>Teknik sorunları tespit etmek ve düzeltmek</li>
+      </ul>
+      <p>Verilerinizi üçüncü taraflara <strong>satmıyoruz</strong>.</p>
+    </div>
+
+    <div class="doc-section">
+      <h3><span class="num">3</span> Veri Depolama ve Güvenlik</h3>
+      <p>Tüm veriler, Supabase altyapısı aracılığıyla güvenli sunucularda depolanmaktadır. Supabase, SOC 2 Type 2 sertifikasına sahiptir ve veriler AES-256 ile şifrelenmektedir.</p>
+      <p>Şifreler asla düz metin olarak saklanmaz; bcrypt ile hash'lenir.</p>
+    </div>
+
+    <div class="doc-section">
+      <h3><span class="num">4</span> Haklarınız</h3>
+      <ul>
+        <li><strong>Erişim hakkı:</strong> Hakkınızdaki verilere erişim talep edebilirsiniz</li>
+        <li><strong>Düzeltme hakkı:</strong> Yanlış bilgileri düzeltme talep edebilirsiniz</li>
+        <li><strong>Silme hakkı:</strong> Hesabınızı ve tüm verilerinizi kalıcı olarak silebilirsiniz</li>
+        <li><strong>İtiraz hakkı:</strong> Belirli veri işleme faaliyetlerine itiraz edebilirsiniz</li>
+      </ul>
+      <p>Bu hakları kullanmak için uygulama içindeki Ayarlar → Hesap menüsünü kullanabilirsiniz.</p>
+    </div>
+
+    <div class="doc-section">
+      <h3><span class="num">5</span> Çerezler ve Yerel Depolama</h3>
+      <p>FitCheck, dil tercihi ve oturum bilgisi gibi kullanıcı deneyimini iyileştiren sınırlı miktarda veriyi cihazınızda yerel olarak saklar. Reklam amaçlı çerez kullanılmaz.</p>
+    </div>
+
+    <div class="doc-section">
+      <h3><span class="num">6</span> Çocukların Gizliliği</h3>
+      <p>FitCheck, 13 yaş altındaki bireylere yönelik değildir. 13 yaş altında bir kullanıcıdan veri topladığımızı fark edersek, ilgili hesabı derhal sileriz.</p>
+    </div>
+
+    <div class="doc-section">
+      <h3><span class="num">7</span> Politika Değişiklikleri</h3>
+      <p>Bu politikayı güncelleyebiliriz. Önemli değişikliklerde uygulama içi bildirim veya e-posta ile sizi haberdar ederiz.</p>
+    </div>
+
+    <div class="contact-card">
+      <div>
+        <p style="font-weight:600;color:#f0ece8;margin-bottom:4px;">Sorularınız için</p>
+        <p>privacy@fitcheck.app adresine ulaşabilirsiniz.</p>
+      </div>
+      <a href="mailto:privacy@fitcheck.app">İletişime Geç</a>
+    </div>
+  </div>
+
+  <!-- ───────── PRIVACY POLICY EN ───────── -->
+  <div id="privacy-en" class="page">
+    <div class="doc-hero">
+      <div class="badge">PRIVACY POLICY</div>
+      <h2>Your Data, Your Control</h2>
+      <p>Last updated: February 2026 &nbsp;·&nbsp; FitCheck App</p>
+    </div>
+
+    <div class="doc-section">
+      <h3><span class="num">1</span> Information We Collect</h3>
+      <p>FitCheck only collects information necessary to provide our service:</p>
+      <ul>
+        <li><strong>Account information:</strong> Name, email address</li>
+        <li><strong>Profile information:</strong> Profile photo, bio, age (optional), city (optional)</li>
+        <li><strong>Content:</strong> Outfit photos and videos you share</li>
+        <li><strong>Interactions:</strong> Likes, comments, votes</li>
+        <li><strong>Messages:</strong> Direct messages between users</li>
+      </ul>
+    </div>
+
+    <div class="doc-section">
+      <h3><span class="num">2</span> How We Use Information</h3>
+      <ul>
+        <li>Create and manage your account</li>
+        <li>Provide a personalized style feed</li>
+        <li>Process community interactions (comments, votes)</li>
+        <li>Maintain app security</li>
+        <li>Identify and fix technical issues</li>
+      </ul>
+      <p>We do <strong>not sell</strong> your data to third parties.</p>
+    </div>
+
+    <div class="doc-section">
+      <h3><span class="num">3</span> Data Storage and Security</h3>
+      <p>All data is stored on secure servers through Supabase infrastructure. Supabase is SOC 2 Type 2 certified and data is encrypted with AES-256.</p>
+      <p>Passwords are never stored in plain text — they are hashed with bcrypt.</p>
+    </div>
+
+    <div class="doc-section">
+      <h3><span class="num">4</span> Your Rights</h3>
+      <ul>
+        <li><strong>Right to access:</strong> You may request access to your data</li>
+        <li><strong>Right to rectification:</strong> You may request correction of inaccurate data</li>
+        <li><strong>Right to erasure:</strong> You can permanently delete your account and all data</li>
+        <li><strong>Right to object:</strong> You may object to certain data processing</li>
+      </ul>
+      <p>You can exercise these rights via Settings → Account in the app.</p>
+    </div>
+
+    <div class="doc-section">
+      <h3><span class="num">5</span> Cookies and Local Storage</h3>
+      <p>FitCheck stores limited data locally on your device (language preference, session info) to improve your experience. No advertising cookies are used.</p>
+    </div>
+
+    <div class="doc-section">
+      <h3><span class="num">6</span> Children's Privacy</h3>
+      <p>FitCheck is not intended for individuals under 13. If we become aware that we have collected data from a user under 13, we will delete the account immediately.</p>
+    </div>
+
+    <div class="doc-section">
+      <h3><span class="num">7</span> Policy Changes</h3>
+      <p>We may update this policy. For significant changes, we will notify you via in-app notification or email.</p>
+    </div>
+
+    <div class="contact-card">
+      <div>
+        <p style="font-weight:600;color:#f0ece8;margin-bottom:4px;">Questions?</p>
+        <p>Reach us at privacy@fitcheck.app</p>
+      </div>
+      <a href="mailto:privacy@fitcheck.app">Contact Us</a>
+    </div>
+  </div>
+
+  <!-- ───────── TERMS TR ───────── -->
+  <div id="terms-tr" class="page">
+    <div class="doc-hero">
+      <div class="badge">KULLANIM KOŞULLARI</div>
+      <h2>Hizmet Şartları</h2>
+      <p>Son güncelleme: Şubat 2026 &nbsp;·&nbsp; FitCheck Uygulaması</p>
+    </div>
+
+    <div class="doc-section">
+      <h3><span class="num">1</span> Kabul</h3>
+      <p>FitCheck'i kullanarak bu koşulları kabul etmiş olursunuz. Kabul etmiyorsanız uygulamayı kullanmayınız.</p>
+    </div>
+
+    <div class="doc-section">
+      <h3><span class="num">2</span> Hesap Sorumluluğu</h3>
+      <ul>
+        <li>Hesap bilgilerinizin gizliliğinden siz sorumlusunuz</li>
+        <li>13 yaşından büyük olduğunuzu beyan edersiniz</li>
+        <li>Başkaları adına hesap oluşturamazsınız</li>
+      </ul>
+    </div>
+
+    <div class="doc-section">
+      <h3><span class="num">3</span> İçerik Kuralları</h3>
+      <ul>
+        <li>Yalnızca kendinize ait veya kullanım hakkınız bulunan içerik paylaşabilirsiniz</li>
+        <li>Hakaret, nefret söylemi veya cinsel içerik paylaşılamaz</li>
+        <li>Spam veya yanıltıcı içerik yasaktır</li>
+        <li>Diğer kullanıcıların kişisel verilerini paylaşamazsınız</li>
+      </ul>
+    </div>
+
+    <div class="doc-section">
+      <h3><span class="num">4</span> Abonelik ve Ödemeler</h3>
+      <p>Premium abonelik aylık $3 karşılığında sunulmaktadır. Abonelik, iptal etmediğiniz sürece otomatik olarak yenilenir. İptal, bir sonraki faturalandırma döneminden önce yapılmalıdır.</p>
+    </div>
+
+    <div class="doc-section">
+      <h3><span class="num">5</span> Hesap Feshi</h3>
+      <p>Bu koşulları ihlal etmeniz durumunda hesabınız askıya alınabilir veya silinebilir. Kendi hesabınızı her zaman Ayarlar menüsünden silebilirsiniz.</p>
+    </div>
+
+    <div class="doc-section">
+      <h3><span class="num">6</span> Sorumluluk Sınırlaması</h3>
+      <p>FitCheck, kullanıcı tarafından oluşturulan içerikten sorumlu değildir. Hizmet "olduğu gibi" sunulmaktadır.</p>
+    </div>
+
+    <div class="contact-card">
+      <div>
+        <p style="font-weight:600;color:#f0ece8;margin-bottom:4px;">Hukuki sorular için</p>
+        <p>legal@fitcheck.app adresine ulaşabilirsiniz.</p>
+      </div>
+      <a href="mailto:legal@fitcheck.app">İletişime Geç</a>
+    </div>
+  </div>
+
+  <!-- ───────── TERMS EN ───────── -->
+  <div id="terms-en" class="page">
+    <div class="doc-hero">
+      <div class="badge">TERMS OF SERVICE</div>
+      <h2>Terms of Service</h2>
+      <p>Last updated: February 2026 &nbsp;·&nbsp; FitCheck App</p>
+    </div>
+
+    <div class="doc-section">
+      <h3><span class="num">1</span> Acceptance</h3>
+      <p>By using FitCheck, you agree to these terms. If you do not agree, please do not use the app.</p>
+    </div>
+
+    <div class="doc-section">
+      <h3><span class="num">2</span> Account Responsibility</h3>
+      <ul>
+        <li>You are responsible for keeping your account credentials confidential</li>
+        <li>You represent that you are at least 13 years old</li>
+        <li>You may not create accounts on behalf of others</li>
+      </ul>
+    </div>
+
+    <div class="doc-section">
+      <h3><span class="num">3</span> Content Rules</h3>
+      <ul>
+        <li>Only share content you own or have rights to use</li>
+        <li>Hate speech, harassment, or adult content is not allowed</li>
+        <li>Spam or misleading content is prohibited</li>
+        <li>Do not share other users' personal data</li>
+      </ul>
+    </div>
+
+    <div class="doc-section">
+      <h3><span class="num">4</span> Subscriptions and Payments</h3>
+      <p>Premium subscription is offered at $3/month. Subscriptions auto-renew unless cancelled before the next billing period.</p>
+    </div>
+
+    <div class="doc-section">
+      <h3><span class="num">5</span> Account Termination</h3>
+      <p>We may suspend or delete your account for violations of these terms. You can delete your own account at any time from the Settings menu.</p>
+    </div>
+
+    <div class="doc-section">
+      <h3><span class="num">6</span> Limitation of Liability</h3>
+      <p>FitCheck is not responsible for user-generated content. The service is provided "as is."</p>
+    </div>
+
+    <div class="contact-card">
+      <div>
+        <p style="font-weight:600;color:#f0ece8;margin-bottom:4px;">Legal questions?</p>
+        <p>Contact us at legal@fitcheck.app</p>
+      </div>
+      <a href="mailto:legal@fitcheck.app">Contact Us</a>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  <p>© 2026 FitCheck &nbsp;·&nbsp; <a href="#" onclick="showTab('privacy', document.querySelectorAll('.tab')[0])">Gizlilik</a> &nbsp;·&nbsp; <a href="#" onclick="showTab('terms', document.querySelectorAll('.tab')[1])">Koşullar</a></p>
+  <p style="margin-top:6px;">Made with ♥ in Istanbul</p>
+</footer>
+
+<script>
+  let currentLang = 'tr'
+  let currentTab = 'privacy'
+
+  function showTab(tab, btn) {
+    currentTab = tab
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'))
+    document.getElementById(`${tab}-${currentLang}`).classList.add('active')
+    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'))
+    btn.classList.add('active')
+  }
+
+  function setLang(lang) {
+    currentLang = lang
+    document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'))
+    document.querySelector(`.lang-btn[onclick="setLang('${lang}')"]`).classList.add('active')
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'))
+    document.getElementById(`${currentTab}-${lang}`).classList.add('active')
+    document.documentElement.lang = lang
+  }
+</script>
+
+</body>
+</html>
