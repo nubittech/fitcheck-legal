@@ -169,6 +169,7 @@
 <div class="tab-bar">
   <button class="tab active" onclick="showTab('privacy', this)">Gizlilik Politikası</button>
   <button class="tab" onclick="showTab('terms', this)">Kullanım Koşulları</button>
+  <button class="tab" onclick="showTab('delete', this)">Hesap Silme</button>
 </div>
 
 <main>
@@ -431,10 +432,74 @@
     </div>
   </div>
 
+  <!-- ───────── DELETE ACCOUNT TR ───────── -->
+  <div id="delete-tr" class="page">
+    <div class="doc-hero">
+      <div class="badge">HESAP SİLME</div>
+      <h2>Hesabınızı ve Verilerinizi Silme</h2>
+      <p>FitCheck uygulamasındaki hesabınızı ve size ait tüm verileri kalıcı olarak silebilirsiniz.</p>
+    </div>
+
+    <div class="doc-section">
+      <h3><span class="num">1</span> Uygulama İçinden Hesap Silme</h3>
+      <p>Hesabınızı silmenin en hızlı ve kolay yolu doğrudan uygulama içinden yapmaktır:</p>
+      <ul>
+        <li>FitCheck uygulamasını açın ve profilinize gidin.</li>
+        <li>Sağ üst köşedeki <strong>Ayarlar (Dişli çark)</strong> simgesine dokunun.</li>
+        <li><strong>Hesabı Sil</strong> seçeneğine tıklayın.</li>
+        <li>Karşınıza çıkan uyarı ekranında işlemi onaylayın.</li>
+      </ul>
+      <p>Bu işlemi yaptığınızda hesabınız, fotoğraflarınız, beğenileriniz ve tüm diğer verileriniz anında ve kalıcı olarak silinir.</p>
+    </div>
+
+    <div class="doc-section">
+      <h3><span class="num">2</span> Web Üzerinden Hesap Silme Talebi</h3>
+      <p>Eğer uygulamaya erişiminiz yoksa, hesabınızın silinmesi için bize e-posta yoluyla talepte bulunabilirsiniz:</p>
+      <ul>
+        <li>FitCheck hesabınıza kayıtlı olan e-posta adresinizden bize bir e-posta gönderin.</li>
+        <li>Konu başlığına <strong>"Hesap Silme Talebi"</strong> yazın.</li>
+        <li>E-postayı <strong>privacy@fitcheck.app</strong> adresine gönderin.</li>
+      </ul>
+      <p>Talebiniz bize ulaştıktan sonra güvenlik amacıyla kimliğiniz doğrulanacak ve en geç <strong>7 gün</strong> içinde tüm verileriniz sistemlerimizden kalıcı olarak silinecektir.</p>
+    </div>
+  </div>
+
+  <!-- ───────── DELETE ACCOUNT EN ───────── -->
+  <div id="delete-en" class="page">
+    <div class="doc-hero">
+      <div class="badge">ACCOUNT DELETION</div>
+      <h2>Delete Your Account and Data</h2>
+      <p>You can permanently delete your FitCheck account and all associated data.</p>
+    </div>
+
+    <div class="doc-section">
+      <h3><span class="num">1</span> Deleting Account In-App</h3>
+      <p>The fastest and easiest way to delete your account is directly within the app:</p>
+      <ul>
+        <li>Open the FitCheck app and go to your profile.</li>
+        <li>Tap the <strong>Settings (Gear icon)</strong> in the top right corner.</li>
+        <li>Tap on <strong>Delete Account</strong>.</li>
+        <li>Confirm the action in the warning prompt.</li>
+      </ul>
+      <p>Once you do this, your account, photos, likes, and all other data will be deleted instantly and permanently.</p>
+    </div>
+
+    <div class="doc-section">
+      <h3><span class="num">2</span> Web Deletion Request</h3>
+      <p>If you don't have access to the app, you can request account deletion via email:</p>
+      <ul>
+        <li>Send an email from the address registered to your FitCheck account.</li>
+        <li>Use <strong>"Account Deletion Request"</strong> as the subject line.</li>
+        <li>Send the email to <strong>privacy@fitcheck.app</strong>.</li>
+      </ul>
+      <p>Upon receiving your request, we will verify your identity for security purposes and all your data will be permanently deleted from our systems within <strong>7 days</strong>.</p>
+    </div>
+  </div>
+
 </main>
 
 <footer>
-  <p>© 2026 FitCheck &nbsp;·&nbsp; <a href="#" onclick="showTab('privacy', document.querySelectorAll('.tab')[0])">Gizlilik</a> &nbsp;·&nbsp; <a href="#" onclick="showTab('terms', document.querySelectorAll('.tab')[1])">Koşullar</a></p>
+  <p>© 2026 FitCheck &nbsp;·&nbsp; <a href="#" onclick="showTab('privacy', document.querySelectorAll('.tab')[0])">Gizlilik</a> &nbsp;·&nbsp; <a href="#" onclick="showTab('terms', document.querySelectorAll('.tab')[1])">Koşullar</a> &nbsp;·&nbsp; <a href="#" onclick="showTab('delete', document.querySelectorAll('.tab')[2])">Hesap Silme</a></p>
   <p style="margin-top:6px;">Made with ♥ in Istanbul</p>
 </footer>
 
