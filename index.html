@@ -167,9 +167,9 @@
 </header>
 
 <div class="tab-bar">
-  <button class="tab active" onclick="showTab('privacy', this)">Gizlilik Politikası</button>
-  <button class="tab" onclick="showTab('terms', this)">Kullanım Koşulları</button>
-  <button class="tab" onclick="showTab('delete', this)">Hesap Silme</button>
+  <button id="tab-privacy" class="tab active" onclick="showTab('privacy', this)">Gizlilik Politikası</button>
+  <button id="tab-terms" class="tab" onclick="showTab('terms', this)">Kullanım Koşulları</button>
+  <button id="tab-delete" class="tab" onclick="showTab('delete', this)">Hesap Silme</button>
 </div>
 
 <main>
@@ -499,13 +499,43 @@
 </main>
 
 <footer>
-  <p>© 2026 Veylo &nbsp;·&nbsp; <a href="#" onclick="showTab('privacy', document.querySelectorAll('.tab')[0])">Gizlilik</a> &nbsp;·&nbsp; <a href="#" onclick="showTab('terms', document.querySelectorAll('.tab')[1])">Koşullar</a> &nbsp;·&nbsp; <a href="#" onclick="showTab('delete', document.querySelectorAll('.tab')[2])">Hesap Silme</a></p>
+  <p>© 2026 Veylo &nbsp;·&nbsp; <a id="footer-privacy" href="#" onclick="showTab('privacy', document.querySelectorAll('.tab')[0])">Gizlilik</a> &nbsp;·&nbsp; <a id="footer-terms" href="#" onclick="showTab('terms', document.querySelectorAll('.tab')[1])">Koşullar</a> &nbsp;·&nbsp; <a id="footer-delete" href="#" onclick="showTab('delete', document.querySelectorAll('.tab')[2])">Hesap Silme</a></p>
   <p style="margin-top:6px;">Made with ♥ in Istanbul</p>
 </footer>
 
 <script>
   let currentLang = 'tr'
   let currentTab = 'privacy'
+
+  const uiLabels = {
+    tr: {
+      tabPrivacy: 'Gizlilik Politikası',
+      tabTerms: 'Kullanım Koşulları',
+      tabDelete: 'Hesap Silme',
+      footerPrivacy: 'Gizlilik',
+      footerTerms: 'Koşullar',
+      footerDelete: 'Hesap Silme'
+    },
+    en: {
+      tabPrivacy: 'Privacy Policy',
+      tabTerms: 'Terms of Service',
+      tabDelete: 'Delete Account',
+      footerPrivacy: 'Privacy',
+      footerTerms: 'Terms',
+      footerDelete: 'Delete Account'
+    }
+  }
+
+  function updateUiLabels(lang) {
+    const labels = uiLabels[lang]
+    if (!labels) return
+    document.getElementById('tab-privacy').textContent = labels.tabPrivacy
+    document.getElementById('tab-terms').textContent = labels.tabTerms
+    document.getElementById('tab-delete').textContent = labels.tabDelete
+    document.getElementById('footer-privacy').textContent = labels.footerPrivacy
+    document.getElementById('footer-terms').textContent = labels.footerTerms
+    document.getElementById('footer-delete').textContent = labels.footerDelete
+  }
 
   function showTab(tab, btn) {
     currentTab = tab
@@ -522,7 +552,10 @@
     document.querySelectorAll('.page').forEach(p => p.classList.remove('active'))
     document.getElementById(`${currentTab}-${lang}`).classList.add('active')
     document.documentElement.lang = lang
+    updateUiLabels(lang)
   }
+
+  updateUiLabels(currentLang)
 </script>
 
 </body>
